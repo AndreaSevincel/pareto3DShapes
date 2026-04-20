@@ -48,7 +48,7 @@ Each shape is represented as a neural signed distance function (SDF) in the styl
 
 A diverse set of Pareto-optimal shapes is discovered by solving a weighted scalarisation of objectives across N different weight vectors sampled via Das–Dennis decomposition:
 
-$$\mathcal{L}_1(\theta, z, \alpha) = -\sum_i \alpha_i f_i(S_\theta(\cdot; z)) + \lambda_\text{eik}\mathcal{L}_\text{eik} + \lambda_\text{smooth}\mathcal{L}_\text{smooth} + \lambda_\text{lat}\mathcal{L}_\text{lat}$$
+$$\mathcal{L}_{1}(\theta, z, \alpha) = -\sum_{i} \alpha_{i} f_{i}(S_{\theta}(\cdot; z)) + \lambda_{\text{eik}}\mathcal{L}_{\text{eik}} + \lambda_{\text{smooth}}\mathcal{L}_{\text{smooth}} + \lambda_{\text{lat}}\mathcal{L}_{\text{lat}}$$
 
 **Differentiable objectives implemented:**
 - **Volume** — soft sigmoid occupancy approximation with temperature annealing
@@ -86,7 +86,7 @@ Each Pareto-optimal SDF is discretised into a point cloud of `N_pts` points samp
 
 **Training objective:**
 
-$$\mathcal{L}_2 = d_\text{CD}(P, \hat{P}) + \beta \mathcal{L}_\text{KL} + \lambda \mathcal{L}_\text{prop}$$
+$$\mathcal{L}_{2} = d_{\text{CD}}(P, \hat{P}) + \beta \mathcal{L}_{\text{KL}} + \lambda \mathcal{L}_{\text{prop}}$$
 
 where `d_CD` is the Chamfer distance, `L_KL` is the closed-form KL divergence, and `L_prop` is a property consistency loss from a jointly trained property predictor.
 
@@ -119,7 +119,7 @@ Multiple samples of `z` at the same `q*` yield geometrically diverse shapes all 
 
 **Evaluation metric — Property Satisfaction Error (PSE):**
 
-$$\text{PSE}(\hat{P}, q^{*}) = \|\hat{q} - q^{*}\|_{2}$$
+$$\text{PSE}(\hat{P}, q^\ast) = \|\hat{q} - q^\ast\|_{2}$$
 
 where `q̂` are the differentiable objective values of the generated shape. Lower PSE = better inverse design fidelity.
 

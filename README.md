@@ -119,7 +119,7 @@ Multiple samples of `z` at the same `q*` yield geometrically diverse shapes all 
 
 **Evaluation metric — Property Satisfaction Error (PSE):**
 
-$$\text{PSE}(\hat{P}, q^{*}) = \|\hat{q} - q^*\\|_{2}$$
+$$\text{PSE}(\hat{P}, q^{*}) = \|\hat{q} - q^{*}\|_{2}$$
 
 where `q̂` are the differentiable objective values of the generated shape. Lower PSE = better inverse design fidelity.
 

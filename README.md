@@ -1,4 +1,4 @@
-content = """# Pareto3DShapes
+# Pareto3DShapes
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Framework-red.svg)
